@@ -1,70 +1,39 @@
 body {
   margin: 0;
-  background: #ffeef3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  padding: 0;
   font-family: 'Comic Sans MS', sans-serif;
+  background: linear-gradient(to bottom, #fce4ec, #fff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
-.envelope {
-  position: relative;
-  width: 300px;
-  height: 200px;
-  background: #c2185b;
-  border-radius: 10px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-  overflow: hidden;
-}
-
-.flap {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #ad1457;
-  transform: rotateX(0deg);
-  transform-origin: top;
-  animation: openFlap 2s ease forwards;
-  z-index: 2;
-}
-
-.letter {
-  position: absolute;
+.card {
   background: white;
-  width: 280px;
-  height: 180px;
-  top: 10px;
-  left: 10px;
-  border-radius: 5px;
-  padding: 20px;
+  padding: 30px;
+  border-radius: 15px;
   text-align: center;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: showLetter 2s ease 2s forwards;
-  z-index: 1;
+  max-width: 350px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-.letter .heart {
-  font-size: 30px;
+.card h1 {
+  font-size: 26px;
+  color: #d81b60;
+}
+
+.card p {
+  font-size: 18px;
+  color: #444;
+}
+
+.emoji {
+  font-size: 40px;
   margin-bottom: 10px;
 }
-.letter .flowers {
-  font-size: 24px;
-  margin-top: 10px;
-}
 
-@keyframes openFlap {
-  to {
-    transform: rotateX(-120deg);
-  }
-}
-
-@keyframes showLetter {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.heart {
+  font-size: 30px;
+  margin-top: 15px;
 }
